@@ -32,7 +32,7 @@ LLAMA2_ARGS="
     --seq-length 128 \
     --max-position-embeddings 128 \
     --micro-batch-size 1 \
-    --global-batch-size 1 \
+    --global-batch-size 8 \
     --lr 0.00015 \
     --train-iters 500000 \
     --lr-decay-iters 320000 \
