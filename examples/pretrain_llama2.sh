@@ -43,7 +43,7 @@ OUTPUT_ARGS="
     --eval-iters 10
 "
 
-torchrun pretrain_gpt.py \
+torchrun pretrain_llama.py \
     $LLAMA2_ARGS \
     $DATA_ARGS \
     $OUTPUT_ARGS \
