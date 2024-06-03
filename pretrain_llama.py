@@ -45,14 +45,13 @@ def model_provider(pre_process=True, post_process=True) -> Union[GPTModel, megat
     """
     args = get_args()
 
-    print_rank_0('building GPT model ...')
+    print_rank_0('building LLaMA model ...')
     # Experimental loading arguments from yaml
     if args.yaml_cfg is not None:
         config = core_transformer_config_from_yaml(args, "language_model")
     else:
         config = core_transformer_config_from_args(args)
 
-    print_rank_0('building LLaMA model ...')
     model = megatron.legacy.model.LLaMAModel(
         config,
         num_tokentypes=0,

@@ -25,7 +25,8 @@ LLAMA2_ARGS="
     --weight-decay 1e-2 \
     --lr-warmup-fraction .01 \
     --clip-grad 1.0 \
-    --fp16
+    --fp16 \
+    --apply_query_key_layer_scaling
 "
 
 DATA_ARGS="
