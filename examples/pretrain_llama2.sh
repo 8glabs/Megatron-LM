@@ -13,10 +13,10 @@ LLAMA2_ARGS="
     --num-layers 32 \
     --hidden-size 4096 \
     --num-attention-heads 32 \
-    --seq-length 4096 \
-    --max-position-embeddings 4096 \
-    --micro-batch-size 4 \
-    --global-batch-size 8 \
+    --seq-length 128 \
+    --max-position-embeddings 128 \
+    --micro-batch-size 1 \
+    --global-batch-size 10 \
     --lr 0.00015 \
     --train-iters 500000 \
     --lr-decay-iters 320000 \
