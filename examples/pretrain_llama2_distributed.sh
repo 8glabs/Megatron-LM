@@ -11,7 +11,7 @@ MASTER_PORT=6000
 NNODES=1
 NODE_RANK=0
 WORLD_SIZE=$(($GPUS_PER_NODE*$NNODES))
-tensor_model_parallel_size=2
+tensor_model_parallel_size=4
 pipeline_model_parallel_size=1
 
 CHECKPOINT_PATH="./checkpoints/"
@@ -35,7 +35,7 @@ LLAMA2_ARGS="
     --seq-length 128 \
     --max-position-embeddings 128 \
     --micro-batch-size 1 \
-    --global-batch-size 8 \
+    --global-batch-size 2 \
     --lr 0.00015 \
     --train-iters 500000 \
     --lr-decay-iters 320000 \
