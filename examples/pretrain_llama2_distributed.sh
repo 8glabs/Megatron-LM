@@ -37,7 +37,7 @@ LLAMA2_ARGS="
     --micro-batch-size 1 \
     --global-batch-size 2 \
     --lr 0.00015 \
-    --train-iters 100 \
+    --train-iters 50 \
     --lr-decay-iters 320000 \
     --lr-decay-style cosine \
     --min-lr 1.0e-5 \
