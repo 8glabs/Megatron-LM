@@ -7,7 +7,7 @@ export CUDA_DEVICE_MAX_CONNECTIONS=1
 #CHECKPOINT_PATH=<Specify path>
 VOCAB_FILE=./tools/gpt2-vocab.json
 MERGE_FILE=./tools/gpt2-merges.txt
-DATA_PATH=<Specify path and file prefix>_text_document
+DATA_PATH=data/my-gpt2
 
 LLAMA2_ARGS="
     --num-layers 32 \
