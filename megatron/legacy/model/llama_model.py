@@ -75,7 +75,8 @@ class LLaMAModel(MegatronModule):
         if not args.untie_embeddings_and_output_weights and not self.causal_lm:
             self.initialize_word_embeddings(init_method_normal)
         
-        if self.causal_lm and self.post_process:
+        # if self.causal_lm and self.post_process:
+        if self.post_process:
             self.lm_head = torch.nn.Linear(args.hidden_size, args.padded_vocab_size, bias=False)
 
     def set_input_tensor(self, input_tensor):
