@@ -60,7 +60,7 @@ OUTPUT_ARGS="
     --eval-iters 10
 "
 
-torchrun $DISTRIBUTED_ARGS pretrain_gpt.py \
+torchrun $DISTRIBUTED_ARGS pretrain_llama.py \
     $LLAMA2_ARGS \
     $DATA_ARGS \
     $OUTPUT_ARGS \
