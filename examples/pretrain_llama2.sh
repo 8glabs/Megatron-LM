@@ -27,7 +27,8 @@ LLAMA2_ARGS="
     --clip-grad 1.0 \
     --fp16 \
     --apply-query-key-layer-scaling \
-    --transformer-impl local
+    --transformer-impl local \
+    --causal_lm
 "
 
 DATA_ARGS="
