@@ -25,8 +25,7 @@ DISTRIBUTED_ARGS="
     --node_rank $NODE_RANK \
     --master_addr $MASTER_ADDR \
     --master_port $MASTER_PORT \
-    --tensor-model-parallel-size $tensor_model_parallel_size \
-    --pipeline-model-parallel-size $pipeline_model_parallel_size
+
 "
 
 LLAMA2_ARGS="
@@ -47,7 +46,9 @@ LLAMA2_ARGS="
     --clip-grad 1.0 \
     --fp16 \
     --apply-query-key-layer-scaling \
-    --transformer-impl local
+    --transformer-impl local \
+    --tensor-model-parallel-size $tensor_model_parallel_size \
+    --pipeline-model-parallel-size $pipeline_model_parallel_size
 "
 
 DATA_ARGS="
