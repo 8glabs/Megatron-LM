@@ -194,7 +194,7 @@ def train_valid_test_datasets_provider(train_val_test_num_samples):
 
     print_rank_0("> building train, validation, and test datasets for GPT ...")
     # TODO test setting the number of samples
-    train_val_test_num_samples = [200, 100, 70]
+    train_val_test_num_samples = [4000, 500, 500]
     train_ds, valid_ds, test_ds = BlendedMegatronDatasetBuilder(
         dataset_type,
         train_val_test_num_samples,
