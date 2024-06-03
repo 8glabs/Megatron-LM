@@ -4,7 +4,7 @@
 
 export CUDA_DEVICE_MAX_CONNECTIONS=1
 
-#CHECKPOINT_PATH=<Specify path>
+CHECKPOINT_PATH="./checkpoints/"
 VOCAB_FILE=./tools/gpt2-vocab.json
 MERGE_FILE=./tools/gpt2-merges.txt
 DATA_PATH=data/my-gpt2
