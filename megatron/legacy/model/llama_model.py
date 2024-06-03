@@ -114,9 +114,9 @@ class LLaMAModel(MegatronModule):
             input_ids,
             position_ids,
             attention_mask,
-            ret_input_ids=ret_input_ids,
-            ret_position_ids=ret_position_ids,
-            ret_attn_mask=ret_attn_mask,
+            retriever_input_ids=ret_input_ids,
+            retriever_position_ids=ret_position_ids,
+            retriever_attn_mask=ret_attn_mask,
             inference_params=inference_params)
 
         if self.post_process:
