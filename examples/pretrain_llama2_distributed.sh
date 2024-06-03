@@ -11,6 +11,8 @@ MASTER_PORT=6000
 NNODES=1
 NODE_RANK=0
 WORLD_SIZE=$(($GPUS_PER_NODE*$NNODES))
+tensor_model_parallel_size=2
+pipeline_model_parallel_size=1
 
 CHECKPOINT_PATH="./checkpoints/"
 VOCAB_FILE=./tools/gpt2-vocab.json
@@ -22,7 +24,9 @@ DISTRIBUTED_ARGS="
     --nnodes $NNODES \
     --node_rank $NODE_RANK \
     --master_addr $MASTER_ADDR \
-    --master_port $MASTER_PORT
+    --master_port $MASTER_PORT \
+    --tensor-model-parallel-size $tensor_model_parallel_size \
+    --pipeline-model-parallel-size $pipeline_model_parallel_size
 "
 
 LLAMA2_ARGS="
