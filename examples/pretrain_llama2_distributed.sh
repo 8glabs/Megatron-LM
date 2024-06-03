@@ -17,7 +17,7 @@ pipeline_model_parallel_size=1
 CHECKPOINT_PATH="./checkpoints/"
 VOCAB_FILE=./tools/gpt2-vocab.json
 MERGE_FILE=./tools/gpt2-merges.txt
-DATA_PATH=data/my-gpt2
+DATA_PATH=./data/my-gpt2_text_document
 
 DISTRIBUTED_ARGS="
     --nproc_per_node $GPUS_PER_NODE \
