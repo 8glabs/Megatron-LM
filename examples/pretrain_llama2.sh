@@ -26,7 +26,8 @@ LLAMA2_ARGS="
     --lr-warmup-fraction .01 \
     --clip-grad 1.0 \
     --fp16 \
-    --apply-query-key-layer-scaling
+    --apply-query-key-layer-scaling \
+    --transformer-impl local
 "
 
 DATA_ARGS="
