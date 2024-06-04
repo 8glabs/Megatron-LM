@@ -36,8 +36,8 @@ LLAMA2_ARGS="
     --num-layers 32 \
     --hidden-size 4096 \
     --num-attention-heads 32 \
-    --seq-length 4096 \
-    --max-position-embeddings 4096 \
+    --seq-length 2048 \
+    --max-position-embeddings 2048 \
     --micro-batch-size 1 \
     --global-batch-size 1 \
     --lr 0.00015 \
