@@ -28,8 +28,8 @@ DISTRIBUTED_ARGS="
 
 "
 
-STRAGGLER_ARGS ="
-    --straggler
+STRAGGLER_ARGS="
+    --log-straggler
 "
 
 LLAMA2_ARGS="
