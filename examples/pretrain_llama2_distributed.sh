@@ -50,7 +50,7 @@ LLAMA2_ARGS="
     --tensor-model-parallel-size $tensor_model_parallel_size \
     --pipeline-model-parallel-size $pipeline_model_parallel_size \
     --ffn-hidden-size 11008 \
-    ----normalization RMSNorm
+    --normalization RMSNorm
 "
 
 DATA_ARGS="
