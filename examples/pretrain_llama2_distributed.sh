@@ -4,14 +4,14 @@
 
 export CUDA_DEVICE_MAX_CONNECTIONS=1
 
-GPUS_PER_NODE=10
+GPUS_PER_NODE=8
 # Change for multinode config
 MASTER_ADDR=localhost
 MASTER_PORT=6000
 NNODES=1
 NODE_RANK=0
 WORLD_SIZE=$(($GPUS_PER_NODE*$NNODES))
-tensor_model_parallel_size=10
+tensor_model_parallel_size=8
 pipeline_model_parallel_size=1
 
 CHECKPOINT_PATH="./checkpoints/"
