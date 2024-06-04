@@ -30,7 +30,7 @@ from megatron.training.yaml_arguments import core_transformer_config_from_yaml
 
 stimer = StragglerDetector()
 
-def model_provider(pre_process=True, post_process=True) -> Union[GPTModel, megatron.legacy.model.GPTModel]:
+def model_provider(pre_process=True, post_process=True) -> Union[megatron.legacy.model.LLaMAModel]:
     """Builds the model.
 
     If you set the use_mcore_models to True, it will return the mcore GPT model and if not the legacy GPT model.
@@ -122,12 +122,12 @@ def loss_func(loss_mask: torch.Tensor, output_tensor: torch.Tensor):
     )
 
 
-def forward_step(data_iterator, model: GPTModel):
+def forward_step(data_iterator, model: megatron.legacy.model.LLaMAModel):
     """Forward training step.
 
     Args:
         data_iterator : Input data iterator
-        model (GPTModel): The GPT Model
+        model (LLaMAModel): The LLAMA2 Model
     """
     args = get_args()
     timers = get_timers()
