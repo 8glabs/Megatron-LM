@@ -28,6 +28,10 @@ DISTRIBUTED_ARGS="
 
 "
 
+STRAGGLER_ARGS ="
+    --straggler
+"
+
 LLAMA2_ARGS="
     --num-layers 32 \
     --hidden-size 4096 \
@@ -69,6 +73,7 @@ OUTPUT_ARGS="
 
 torchrun $DISTRIBUTED_ARGS pretrain_llama.py \
     $LLAMA2_ARGS \
+    $STRAGGLER_ARGS \
     $DATA_ARGS \
     $OUTPUT_ARGS \
     --distributed-backend nccl \
