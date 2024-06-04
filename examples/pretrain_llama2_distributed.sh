@@ -59,8 +59,8 @@ DATA_ARGS="
 "
 
 OUTPUT_ARGS="
-    --log-interval 2 \
-    --save-interval 10000 \
+    --log-interval 10 \
+    --save-interval 500 \
     --eval-interval 1000 \
     --eval-iters 10
 "
