@@ -48,7 +48,9 @@ LLAMA2_ARGS="
     --apply-query-key-layer-scaling \
     --transformer-impl local \
     --tensor-model-parallel-size $tensor_model_parallel_size \
-    --pipeline-model-parallel-size $pipeline_model_parallel_size
+    --pipeline-model-parallel-size $pipeline_model_parallel_size \
+    --ffn-hidden-size 11008 \
+    --RMSNorm
 "
 
 DATA_ARGS="
