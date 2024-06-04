@@ -141,6 +141,11 @@ def forward_step(data_iterator, model: megatron.legacy.model.LLaMAModel):
     timers('batch-generator').stop()
 
     with stimer:
+        print("tokens", tokens.shape)
+        print("labels", labels.shape)
+        print("loss_mask", loss_mask.shape)
+        print("attention_mask", attention_mask.shape)
+        print("position_ids", position_ids.shape)
         output_tensor = model(tokens, position_ids, attention_mask,
                               labels=labels)
 
